@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery.mobile/jquery.mobile-1.4.4.min.css">
+	<script src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery/jquery.js"></script>
+    <script src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery.mobile/jquery.mobile-1.4.4.js"></script>
+	<script	src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery/jquery-ui.js"></script>
+	<title>Monopoly Score</title>
+	<link rel="shortcut icon" href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/monopoly.png" type="image/png">
+	<link rel="stylesheet"	href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/css/main.css">
+	<link rel="stylesheet"	href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery/jquery-ui.min.css">
+	<link rel="stylesheet"	href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery/jquery-ui.structure.min.css">
+	<link rel="stylesheet"	href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/jquery/jquery-ui.theme.min.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/css/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/css/main.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="utf-8" src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/js/cordova.js"></script>
+	<style type="text/css">
+	table tr td{
+	text-align:center;
+}
+	table tr td.head{
+	font-size: 23px;
+	border: 2px solid black;
+}
+html {
+-ms-touch-action: manipulation;
+touch-action: manipulation;
+}
+li p a.digit-click {
+text-decoration: none;
+color: white;
+}
+	</style>
+</head>
+<body>
+<div data-role="page" class="jqm-demos" id="panel-fixed-page1">
+
+    <div data-role="header" data-position="fixed" style="height: 50px">
+        <h1>Monopoly Score</h1>
+        <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <a href="#add-form" data-icon="gear" data-iconpos="notext">Setting</a>
+    </div><!-- /header -->
+
+ <div role="main" id="Main" class="ui-content jqm-content jqm-fullwidth" style="margin:0 50px;position: absolute; " >
+ 
+<div style="height: 500px" id="container1">
+<div style="float: left;margin-top: 0px" >
+   <form>
+    <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+        <input type="radio" name="give"	value="player1" id="radio1" class="give css-checkbox"> 
+        <label 	for="radio1" class="css-label radGroup1" style="font-size:31px;width: 200px">Anshu</label><input type="hidden" > 
+        <input type="radio" name="take" value="player1" id="radio11" class="take css-checkbox">
+        <label for="radio11"	class="css-label radGroup2" style="font-size:31px;width: 200px">Anshu</label><br>
+        <input type="radio" name="give"	value="player2" id="radio12" class="give  css-checkbox">
+        <label	for="radio12" class="css-label radGroup1" style="font-size:31px;width: 200px">Kalpana</label>
+		<input type="radio" name="take" value="player2" id="radio13" class="take  css-checkbox"> 
+		<label for="radio13" class="css-label radGroup2" style="font-size:31px;width: 200px">Kalpana</label><br>
+		<input type="radio" name="give"	value="player3" id="radio14" class="give  css-checkbox"> 
+		<label for="radio14" class="css-label radGroup1" style="font-size:31px;width: 200px">Sanjan</label>
+		<input type="radio" name="take" value="player3" id="radio15" class="take  css-checkbox"> 
+		<label for="radio15" class="css-label radGroup2" style="font-size:31px;width: 200px">Sanjan</label><br>
+		<input type="radio" name="give"	value="player4" id="radio16" class="give  css-checkbox"> 
+		<label for="radio16" class="css-label radGroup1" style="font-size:31px;width: 200px">Tirtha</label>
+		<input type="radio" name="take" value="player4" id="radio17" class="take css-checkbox"> 
+		<label for="radio17" class="css-label radGroup2" style="font-size:31px;width: 200px">Tirtha</label><br>
+		<input type="radio" name="give"	value="bank" id="radio18" class="give  css-checkbox"> 
+		<label	for="radio18" class="css-label radGroup1" style="font-size:31px;width: 200px">Bank</label>
+		<input type="radio" name="take" value="bank" id="radio19"	class="take  css-checkbox"> 
+		<label for="radio19" class="css-label radGroup2" style="font-size:31px;width: 200px">Bank</label>
+    </fieldset>
+</form>
+</div>
+<div style="float: left; margin-left: 50px; margin-top: 9px">
+
+
+ <div id="main-wrapper" style="width: 400px ;">
+<section role="main">
+<div class="dialPad compact">
+<div class="number" >0</div>
+<div class="dials">
+<ol>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">1</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">2</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">3</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">4</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">5</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">6</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">7</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">8</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">9</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">.</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">0</a></strong></p>
+</li>
+<li class="digits">
+<p><strong><a href="#" class="digit-click">00</a></strong></p>
+</li>
+<li class="digits pad-action">
+<p><a href="#" class="digit-click">Clear</a></p>
+</li>
+<li class="digits pad-action">
+<p><a href="#" class="digit-click">Delete</a> </p>
+</li>
+<li class="digits pad-action adding">
+<p><a href="#" class="digit-click">Add</a></p>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</div>
+    
+</div>
+</div>
+	
+	<div  id="container2">
+	<div style="float: left;">
+	<table style="font-size: 20px;font-variant: bold">
+		<tr >
+			<td align="center" >Anshu</td><td>Kalpana</td></tr>
+		<tr>
+			<td><input type="number" id="player1" value="1500" style="width: 160px;height: 40px;margin: 10px"readonly></td>		
+			<td><input type="number" id="player2" value="1500" style="width: 160px;height: 40px; margin: 10px" readonly></td></tr>
+			<tr>
+			<td>Sanjan</td><td>Tirtha</td></tr><tr>
+			<td><input type="number" id="player3" value="1500" style="width: 160px;height: 40px; margin: 10px" readonly></td>
+			
+			<td><input type="number" id="player4" value="1500" style="width: 160px;height: 40px;margin: 10px" readonly></td>
+		</tr>
+	</table>
+	</div>
+	<div style="display: inline; float: left;margin:20px 130px 0px;font-size: 20px" align="center"> 
+	<span>Leader Board</span>
+	<table style="font-size: 18px;font-variant: bold;border: 2px solid;">
+		<tr><td width="130px" class="head">Position </td><td width="130px" class="head"><div>Name</div></td></tr>
+		<tr><td><div id="1st" class="undefine">undefine<div> </td><td><div>Anshu</div></td></tr>
+		<tr><td><div id="2nd" class="undefine">undefine<div> </td><td>Kalpana</td></tr>
+		<tr><td><div id="3rd" class="undefine">undefine<div></td><td>Sanjan</td></tr>
+		<tr><td><div id="4th" class="undefine">undefine<div></td><td>Tirtha</td></tr>
+	</table></div>
+	</div>
+	
+	
+	
+	</div><!-- /content -->
+
+	<div data-role="panel" data-position-fixed="true" data-display="push" data-theme="b" id="nav-panel">
+
+		<ul data-role="listview" class="color-element">
+            <li data-icon="delete"><a id="close" href="#" data-rel="close">Close menu</a></li>
+          <li>
+          <form>
+    <fieldset data-role="controlgroup" data-type="horizontal" data-theme="a" data-content-theme="a">
+        <legend style="color: white;">Collapse On Select:</legend>
+        <input type="radio" name="radioClopse" value="yes" class="col" id="checkbox-h-2a">
+        <label for="checkbox-h-2a">&nbsp;&nbsp;Yes&nbsp;&nbsp;</label>
+        <input type="radio" name="radioClopse" value="no" class="col" id="checkbox-h-2b" checked>
+        <label for="checkbox-h-2b">&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;</label>
+    </fieldset>
+    <fieldset data-role="controlgroup" data-type="horizontal" data-theme="a" data-content-theme="a">
+        <legend style="color: white;">Vibration On/Off</legend>
+        <input type="radio" name="vibrate" value="yes" class="col1" id="checkbox-h-2a1" checked>
+        <label for="checkbox-h-2a1">&nbsp;&nbsp;Yes&nbsp;&nbsp;</label>
+        <input type="radio" name="vibrate" value="no" class="col1" id="checkbox-h-2b1" >
+        <label for="checkbox-h-2b1">&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;</label>
+    </fieldset>
+</form>
+          </li>
+          <li>
+       <div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-mini="true">
+        <div data-role="collapsible"  >
+    		<h4>Background Color</h4>
+   			 <ul data-role="listview">
+            <!-- <h3>Background Color</h3> -->
+                <li><a href="#" data-index="bg" color-index="#FFFFFF">White</a></li>
+                <li><a href="#" data-index="bg" color-index="#000000">Black</a></li>
+                <li><a href="#" data-index="bg" color-index="#e51c23"><span style="color:#e51c23;">Red</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#00bcd4"><span style="color:#00bcd4;">Cyan</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#ffeb3b"><span style="color:#ffeb3b;">Yellow</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#ff9800"><span style="color:#ff9800;">Orrange</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#9c27b0"><span style="color:#9c27b0;">Purple</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#3f51b5"><span style="color:#3f51b5;">Indigo</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#009688"><span style="color:#009688;">Teal</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#259b24"><span style="color:#259b24;">Green</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#cddc39"><span style="color:#cddc39;">Lime</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#795548"><span style="color:#795548;">Brown</span></a></li>
+                <li><a href="#" data-index="bg" color-index="#9e9e9e"><span style="color:#9e9e9e;">Grey</span></a></li>
+                </ul>
+                </div>
+               
+        <div data-role="collapsible" >
+    		<h4>Font Color</h4>
+   			 <ul data-role="listview">
+                <li><a href="#" data-index="fc" color-index="#FFFFFF">White</a></li>
+                <li><a href="#" data-index="fc" color-index="#000000">Black(White Sadow)</a></li>
+                </ul>
+                </div>
+                
+        <div data-role="collapsible" >
+    		<h4>Botton Color</h4>
+   			 <ul data-role="listview">
+                <li><a href="#" data-index="bc" color-index="#FFFFFF">White</a></li>
+                <li><a href="#" data-index="bc" color-index="#000000">Grey</a></li>
+                <li><a href="#" data-index="bc" color-index="#e51c23"><span style="color:#e51c23;"> Red</span></a></li>
+                <li><a href="#" data-index="bc" color-index="#ffeb3b"><span style="color:#ffeb3b;"> Yellow</span></a></li>
+                <li><a href="#" data-index="bc" color-index="#ff9800"><span style="color:#ff9800;"> Orange</span></a></li>
+                <li><a href="#" data-index="bc" color-index="#9c27b0"><span style="color:#9c27b0;"> Purple</span></a></li>
+                <li><a href="#" data-index="bc" color-index="#3f51b5"><span style="color:#3f51b5;"> Indigo</span></a></li>
+                <li><a href="#" data-index="bc" color-index="#009688"><span style="color:#009688;"> Teal</span></a></li>
+                </ul>
+                </div>
+           </div>
+                </li>
+		</ul>
+
+	</div><!-- /panel -->
+
+	<div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="add-form">
+
+        <form class="userform">
+           <div data-role="content">
+ <a href="#"   id="clearall" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" >Clear Data</a>
+ <a href="#"   id="undo" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini" >Undo</a>
+			</div>
+            
+        </form>
+<p id="demo">you are Playing From  position:</p>
+
+<div id="mapholder"></div><br>
+<p id="battery">Battery Info:<a href="#"   id="refresh" >refresh</a></p>
+
+<div id="batteryInfo">no battery info </div><br>
+<p id="device">Device Info:</p>
+<div id="DeviceInfo">hre</div>
+	</div><!-- /panel -->
+
+</div><!-- /page -->
+<!-- 	<div id="dialog-message" style="display: none" title="Warning ">
+		<p>Please select a Donor and a Reciever</p>
+	</div>
+
+	<div id="dialog-confirm" style="display: none" title="Clear All Data?">
+		<p>These data will be permanently deleted and cannot be recovered.
+			Are you sure?</p>
+	</div>
+	
+<div data-role="page" id="dialog">
+	
+		<div data-role="header" data-theme="b" class="ui-header ui-bar-b" role="banner">
+			<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Clear All Data?</h1>
+
+		</div>
+
+		<div data-role="content" data-theme="b" class="ui-content ui-body-b" role="main">
+			<h1>Delete data?</h1>
+			<p>These data will be permanently deleted and cannot be recovered.
+			Are you sure?</p>
+			<a href="#Main" data-role="button" data-rel="back" data-theme="b" id="clearall" >Clear</a>       
+			<a href="#" data-role="button" data-rel="back" data-theme="c"  "> Cancel</a>    
+		</div>
+	</div> -->
+
+<script type="text/javascript"
+		src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/js/player.js">
+</script>
+<script src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/js/plugins.js"></script> 
+<script src="https://googledrive.com/host/0B2W14xzGn10Wek9qbVVLb0pzTFU/resource/js/main.js"></script>
+<script>
+ var x = document.getElementById("demo");
+
+getLocation();
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude+","+position.coords.longitude;
+
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=235x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+
+
+
+ </script>
+
+</body>
+</html>
