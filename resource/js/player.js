@@ -2,14 +2,15 @@ $(start);
 
 function start() {
 	$(".textbox").css("width", "60px");
+	$(".ui-panel-wrapper").css("overflow","auto");
 	var option = null;
-	var vibrate = "yes";
+	var vibrate = "no";
 	var bg = window.sessionStorage.getItem("bg") || "#f9f9f9";
 	var bc = window.sessionStorage.getItem("bc") || "#000000";
 	var fc = window.sessionStorage.getItem("fc") || "#000000";
 	console.log(bg);
 	var ua = navigator.userAgent, 
-    event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+	event = (ua.match(/iPad/i)) ? "touchstart" : "click";
 
 	$('.color-element div li a')
 			.click(
