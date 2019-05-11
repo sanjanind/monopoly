@@ -57,25 +57,25 @@ color: white;
    <form>
     <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
         <input type="radio" name="give"	value="player1" id="radio1" class="give css-checkbox"> 
-        <label 	for="radio1" class="css-label radGroup1" style="font-size:31px;width: 200px">Anshu</label><input type="hidden" > 
+        <label 	for="radio1" class="pl1 css-label radGroup1" style="font-size:31px;width: 200px">Anshu</label><input type="hidden" > 
         <input type="radio" name="take" value="player1" id="radio11" class="take css-checkbox">
-        <label for="radio11"	class="css-label radGroup2" style="font-size:31px;width: 200px">Anshu</label><br>
+        <label for="radio11"	class="pl1 css-label radGroup2" style="font-size:31px;width: 200px">Anshu</label><br>
         <input type="radio" name="give"	value="player2" id="radio12" class="give  css-checkbox">
-        <label	for="radio12" class="css-label radGroup1" style="font-size:31px;width: 200px">Kalpana</label>
+        <label	for="radio12" class="pl2 css-label radGroup1" style="font-size:31px;width: 200px">Kalpana</label>
 		<input type="radio" name="take" value="player2" id="radio13" class="take  css-checkbox"> 
-		<label for="radio13" class="css-label radGroup2" style="font-size:31px;width: 200px">Kalpana</label><br>
+		<label for="radio13" class="pl2 css-label radGroup2" style="font-size:31px;width: 200px">Kalpana</label><br>
 		<input type="radio" name="give"	value="player3" id="radio14" class="give  css-checkbox"> 
-		<label for="radio14" class="css-label radGroup1" style="font-size:31px;width: 200px">Sanjan</label>
+		<label for="radio14" class="pl3 css-label radGroup1" style="font-size:31px;width: 200px">Sanjan</label>
 		<input type="radio" name="take" value="player3" id="radio15" class="take  css-checkbox"> 
-		<label for="radio15" class="css-label radGroup2" style="font-size:31px;width: 200px">Sanjan</label><br>
+		<label for="radio15" class="pl3 css-label radGroup2" style="font-size:31px;width: 200px">Sanjan</label><br>
 		<input type="radio" name="give"	value="player4" id="radio16" class="give  css-checkbox"> 
-		<label for="radio16" class="css-label radGroup1" style="font-size:31px;width: 200px">Tirtha</label>
+		<label for="radio16" class="pl4 css-label radGroup1" style="font-size:31px;width: 200px">Tirtha</label>
 		<input type="radio" name="take" value="player4" id="radio17" class="take css-checkbox"> 
-		<label for="radio17" class="css-label radGroup2" style="font-size:31px;width: 200px">Tirtha</label><br>
+		<label for="radio17" class="pl4 css-label radGroup2" style="font-size:31px;width: 200px">Tirtha</label><br>
 		<input type="radio" name="give"	value="bank" id="radio18" class="give  css-checkbox"> 
-		<label	for="radio18" class="css-label radGroup1" style="font-size:31px;width: 200px">Bank</label>
+		<label	for="radio18" class="pl5 css-label radGroup1" style="font-size:31px;width: 200px">Bank</label>
 		<input type="radio" name="take" value="bank" id="radio19"	class="take  css-checkbox"> 
-		<label for="radio19" class="css-label radGroup2" style="font-size:31px;width: 200px">Bank</label>
+		<label for="radio19" class="pl5 css-label radGroup2" style="font-size:31px;width: 200px">Bank</label>
     </fieldset>
 </form>
 </div>
@@ -146,12 +146,12 @@ color: white;
 	<div style="float: left;">
 	<table style="font-size: 20px;font-variant: bold">
 		<tr >
-			<td align="center" >Anshu</td><td>Kalpana</td></tr>
+			<td align="center"  class="pl1">Anshu</td><td class="pl2">Kalpana</td></tr>
 		<tr>
 			<td><input type="number" id="player1" value="1500" style="width: 160px;height: 40px;margin: 10px"readonly></td>		
 			<td><input type="number" id="player2" value="1500" style="width: 160px;height: 40px; margin: 10px" readonly></td></tr>
 			<tr>
-			<td>Sanjan</td><td>Tirtha</td></tr><tr>
+			<td class="pl3"> Sanjan</td><td class="pl4">Tirtha</td></tr><tr>
 			<td><input type="number" id="player3" value="1500" style="width: 160px;height: 40px; margin: 10px" readonly></td>
 			
 			<td><input type="number" id="player4" value="1500" style="width: 160px;height: 40px;margin: 10px" readonly></td>
@@ -162,10 +162,10 @@ color: white;
 	<span>Leader Board</span>
 	<table style="font-size: 18px;font-variant: bold;border: 2px solid;">
 		<tr><td width="130px" class="head">Position </td><td width="130px" class="head"><div>Name</div></td></tr>
-		<tr><td><div id="1st" class="undefine">undefine<div> </td><td><div>Anshu</div></td></tr>
-		<tr><td><div id="2nd" class="undefine">undefine<div> </td><td>Kalpana</td></tr>
-		<tr><td><div id="3rd" class="undefine">undefine<div></td><td>Sanjan</td></tr>
-		<tr><td><div id="4th" class="undefine">undefine<div></td><td>Tirtha</td></tr>
+		<tr><td><div id="1st" class="undefine">0<div> </td><td class="pl1">Anshu</td></tr>
+		<tr><td><div id="2nd" class="undefine">0<div> </td><td class="pl2">Kalpana</td></tr>
+		<tr><td><div id="3rd" class="undefine">0<div></td><td class="pl3">Sanjan</td></tr>
+		<tr><td><div id="4th" class="undefine">0<div></td><td class="pl4">Tirtha</td></tr>
 	</table></div>
 	</div>
 	
@@ -194,6 +194,15 @@ color: white;
         <label for="checkbox-h-2b1">&nbsp;&nbsp;&nbsp;No&nbsp;&nbsp;&nbsp;</label>
     </fieldset>
 </form>
+          </li>
+<li>
+    <input style="font-size:21px;width: 300px" id="pl1" placeholder="Player 1">
+    <hr>
+    <input style="font-size:21px;width: 300px" id="pl2" placeholder="Player 2">
+    <hr>
+    <input style="font-size:21px;width: 300px" id="pl3" placeholder="Player 3">
+    <hr>
+    <input style="font-size:21px;width: 300px" id="pl4" placeholder="Player 4">
           </li>
           <li>
        <div data-role="collapsibleset" data-theme="a" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-mini="true">
@@ -297,23 +306,23 @@ color: white;
 <script>
  var x = document.getElementById("demo");
 
-getLocation();
+// getLocation();
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition,showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition,showError);
+//     } else {
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//     }
+// }
 
-function showPosition(position) {
-    var latlon = position.coords.latitude+","+position.coords.longitude;
+// function showPosition(position) {
+//     var latlon = position.coords.latitude+","+position.coords.longitude;
 
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=235x300&sensor=false";
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-}
+//     var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+//     +latlon+"&zoom=14&size=235x300&sensor=false";
+//     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+// }
 
 function showError(error) {
     switch(error.code) {

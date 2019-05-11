@@ -131,7 +131,7 @@ function start() {
 					window.sessionStorage.setItem("player3", player3);
 					window.sessionStorage.setItem("player4", player4);
 					var points = [player1,player2,player3,player4];
-					var map = {player1 :"1st",player2 :"2nd",player3 :"3rd",player4 :"4th"};
+					// var map = {player1 :"1st",player2 :"2nd",player3 :"3rd",player4 :"4th"};
 					points.sort(function(a, b){return a-b});
 					console.log(points);
 					var play=points.pop();
@@ -179,7 +179,7 @@ function start() {
 			$("#player3").val(1500);
 			$("#player4").val(1500);
 			add = sub = null;
-			$('.undefine').html('undefine');
+			$('.undefine').html('0');
 			$('input').removeAttr('checked');
 			$('.css-label.ui-btn.ui-corner-all.ui-btn-inherit').css("background-color", bc);
 			window.sessionStorage.clear();
