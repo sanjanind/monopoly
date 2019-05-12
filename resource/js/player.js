@@ -62,7 +62,7 @@ function start() {
     $('.ui-panel-wrapper').css('background-color', bg);
     $('.ui-panel-wrapper').css('color', fc);
     $('.css-label.ui-btn.ui-corner-all.ui-btn-inherit').css('background', bc);
-    onDeviceReady();
+    // onDeviceReady();
   };
 
   $('#player1').val(pla1);
