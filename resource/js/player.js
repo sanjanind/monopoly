@@ -198,7 +198,7 @@ function start() {
 	$("#refresh").click(function() {
 		updateStatus();
 	});
-	 var battery = navigator.battery || navigator.webkitBattery;
+	 var battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery;
 	    console.log(battery);
 	if (typeof battery != 'undefined'){
 	    battery.addEventListener('chargingchange', updateStatus);  
