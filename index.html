@@ -22,7 +22,9 @@
 	<link href="./resource/css/normalize.css" rel="stylesheet" type="text/css" />
 	<link href="./resource/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="./resource/css/main.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" charset="utf-8" src="./resource/js/cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./resource/js/cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./resource/js/device.js"></script>
+
 	<style type="text/css">
 	table tr td{
 	text-align:center;
@@ -262,13 +264,13 @@ color: white;
 			</div>
             
         </form>
-<p id="demo">you are Playing From  position:</p>
+<p id="demo">you are Playing From : </p>
 
 <div id="mapholder"></div><br>
-<p id="battery">Battery Info:<a href="#"   id="refresh" >refresh</a></p>
+<p id="battery" style="font-weight:bold">Battery Info (Only Chrome) :
 
-<div id="batteryInfo">no battery info </div><br>
-<p id="device">Device Info:</p>
+<div id="DeviceBattery">No Data</div><br>
+<p id="device" style="font-weight:bold">Device Info:</p>
 <div id="DeviceInfo">hre</div>
 	</div><!-- /panel -->
 
@@ -306,23 +308,23 @@ color: white;
 <script>
  var x = document.getElementById("demo");
 
-// getLocation();
+getLocation();
 
-// function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition,showError);
-//     } else {
-//         x.innerHTML = "Geolocation is not supported by this browser.";
-//     }
-// }
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
 
-// function showPosition(position) {
-//     var latlon = position.coords.latitude+","+position.coords.longitude;
+function showPosition(position) {
+    var latlon = position.coords.latitude+","+position.coords.longitude;
 
-//     var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-//     +latlon+"&zoom=14&size=235x300&sensor=false";
-//     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-// }
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=235x300&sensor=false&key=AIzaSyBjJLvqApoz4omfZ3FxXa6PHTlDoZ5NAEI";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
 
 function showError(error) {
     switch(error.code) {
